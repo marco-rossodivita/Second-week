@@ -1,6 +1,7 @@
 package com.corso.java.connectionDB;
 
 import com.corso.java.connectionDB.DBConstant;
+import com.corso.java.utils.LOG;
 
 import java.sql.*;
 
@@ -14,6 +15,7 @@ public class DBConnection {
 
         try{
 
+            LOG L = new LOG();
             //Stringa del driver "com.."
             Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
 
@@ -30,7 +32,7 @@ public class DBConnection {
 
             while(resultSet.next()){
                 for(int i = 1; i <= md.getColumnCount(); i++)
-                    System.out.println(resultSet.getString(i));
+                    L.info(resultSet.getString(i));
             }
 
         } catch (SQLException | ClassNotFoundException | InstantiationException | IllegalAccessException e){
