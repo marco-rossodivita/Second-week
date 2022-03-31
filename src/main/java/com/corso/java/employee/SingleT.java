@@ -1,6 +1,5 @@
 package com.corso.java.employee;
 
-import com.corso.java.SingTon.Singleton;
 
 import java.io.IOException;
 import java.sql.Connection;
