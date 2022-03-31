@@ -9,8 +9,12 @@ import java.sql.*;
 
 public class DB {
 
-    static LOG L = LOG.getInstance();
-    ReadProperties rp = new ReadProperties();
+    public static LOG L = LOG.getInstance();
+    public ReadProperties rp = new ReadProperties();
+    public Statement statement = null;
+    public PreparedStatement ps = null;
+    public ResultSet rs = null;
+    public Connection conn = null;
 
     /**
      * Constructor
@@ -50,6 +54,16 @@ public class DB {
                 for (int i = 1; i <= md.getColumnCount(); i++)
                     L.info(rs.getString(i));
             }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void closeAll() {
+        try {
+            if(statement != null) statement.close();
+            if (ps != null) ps.close();
+            if (conn != null) conn.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
