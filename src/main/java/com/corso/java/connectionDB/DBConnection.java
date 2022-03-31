@@ -15,7 +15,7 @@ public class DBConnection {
 
         try{
 
-            LOG L = new LOG();
+            LOG L = LOG.getInstance();
             //Stringa del driver "com.."
             Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
 
