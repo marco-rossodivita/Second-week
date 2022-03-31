@@ -9,51 +9,48 @@ public class LOG {
 
     public static LOG instance = null;
 
-    {BasicConfigurator.configure();}
+    {
+        BasicConfigurator.configure();
+    }
 
-    public LOG(){}
+    private LOG() {}
 
     /**
      * @return instance
      */
-    public static LOG getInstance(){
-        if(instance == null)
-            synchronized (LOG.class){
+    public static LOG getInstance() {
+        if (instance == null)
+            synchronized (LOG.class) {
                 instance = new LOG();
             }
-
         return instance;
     }
 
     /**
-     *
      * @param parameter
      */
-    public void info(String parameter){
+    public void info(String parameter) {
         L.info(parameter);
     }
 
     /**
-     *
      * @param parameter
      */
-    public void debug(String parameter){
+    public void debug(String parameter) {
         L.debug(parameter);
     }
 
     /**
-     *
      * @param parameter
      */
-    public void warn(String parameter){
+    public void warn(String parameter) {
         L.warn(parameter);
     }
 
     /**
-     *
      * @param parameter
      */
-    public void error(String parameter){
+    public void err(String parameter) {
         L.error(parameter);
     }
 

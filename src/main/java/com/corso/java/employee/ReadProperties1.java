@@ -1,12 +1,14 @@
-package com.corso.java.utils;
+package com.corso.java.employee;
 
+
+import com.corso.java.utils.LOG;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-public class ReadProperties {
+public class ReadProperties1 {
 
     private static LOG L;
     private Properties properties;
@@ -15,7 +17,7 @@ public class ReadProperties {
     private final ClassLoader loader = Thread.currentThread().getContextClassLoader();
 
 
-    public ReadProperties() {
+    public ReadProperties1() {
         this.init();
     }
 
@@ -25,7 +27,7 @@ public class ReadProperties {
      * @param properties
      * @param inputStream
      */
-    public ReadProperties(Properties properties, InputStream inputStream) {
+    public ReadProperties1(Properties properties, InputStream inputStream) {
         this.properties = properties;
         this.inputStream = inputStream;
     }
@@ -50,8 +52,8 @@ public class ReadProperties {
      *
      * @throws IOException
      */
-    public void read(String name) throws IOException {
-        this.resourceName = name;
+    public void read() throws IOException {
+        this.resourceName = "application.properties";
         inputStream = new FileInputStream("src/main/resources/" + this.resourceName);
         this.properties.load(inputStream);
     }
