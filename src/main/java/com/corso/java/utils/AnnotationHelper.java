@@ -3,7 +3,6 @@ package com.corso.java.utils;
 import com.corso.java.annotation.Logger;
 
 import java.lang.annotation.Annotation;
-import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
 public class AnnotationHelper<A extends Annotation> {

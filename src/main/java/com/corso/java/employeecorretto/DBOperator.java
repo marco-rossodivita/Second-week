@@ -1,9 +1,7 @@
 package com.corso.java.employeecorretto;
 
 import com.corso.java.annotation.Logger;
-import com.corso.java.employee.Employee;
 import com.corso.java.utils.DB;
-import com.corso.java.utils.Singleton;
 
 import java.io.IOException;
 import java.sql.ResultSet;

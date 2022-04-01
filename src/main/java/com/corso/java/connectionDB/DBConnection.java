@@ -1,6 +1,5 @@
 package com.corso.java.connectionDB;
 
-import com.corso.java.connectionDB.DBConstant;
 import com.corso.java.utils.LOG;
 
 import java.sql.*;

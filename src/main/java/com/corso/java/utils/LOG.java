@@ -1,6 +1,5 @@
 package com.corso.java.utils;
 
-import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 
 public class LOG {
@@ -8,10 +7,6 @@ public class LOG {
     public static final Logger L = Logger.getLogger(LOG.class);
 
     public static LOG instance = null;
-
-    {
-        BasicConfigurator.configure();
-    }
 
     private LOG() {}
 

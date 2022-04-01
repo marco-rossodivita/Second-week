@@ -1,7 +1,5 @@
 package com.corso.java.utils;
 
-import lombok.Data;
-
 import java.sql.*;
 
 public class DBConnection {

@@ -1,8 +1,6 @@
 package com.corso.java.utils;
 
 
-import com.corso.java.connectionDB.DBConstant;
-
 import java.io.IOException;
 import java.sql.*;
 

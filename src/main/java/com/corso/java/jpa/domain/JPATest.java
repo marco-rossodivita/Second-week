@@ -34,7 +34,7 @@ public class JPATest {
         Person person;
 
         //Read the existing entries
-        Query q = em.createQuery("select '*' from Person m");
+        Query q = em.createQuery("select m from Person m");
         //Persons should be empty
     }
 
